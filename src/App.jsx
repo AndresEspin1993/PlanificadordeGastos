@@ -10,7 +10,7 @@ import IconoNuevoGasto from './img/nuevo-gasto.svg'
 
 function App() {
 
-  const [gastos, setGastos] = useState(  localStorage.getItem('gastos') ? JSON.parse(localStorage.getItem('gastos')) :  []) ;
+  const [gastos, setGastos] = useState(  localStorage.getItem('gastos') ? JSON.parse(localStorage.getItem('gastos')) :  []);
 
   const [presupuesto, setPresupuesto] = useState( Number(localStorage.getItem('presupuesto')) ?? 0);
   const [isValidPresupuesto, setIsValidPresupuesto ] = useState(false);
@@ -20,7 +20,7 @@ function App() {
 
   const[gastoEditar, setGastoEditar] = useState({});
 
-  const [filtro, setFiltro] = useState([]);
+  const [filtro, setFiltro] = useState('');
   const [gastosFiltrados, setGastosFiltrados] = useState([]);
 
   useEffect(() => {
